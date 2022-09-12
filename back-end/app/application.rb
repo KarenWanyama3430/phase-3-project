@@ -36,7 +36,7 @@ class Application
       # end
 
 
-      
+
     elsif req.path.match(/tasks/) && req.get?
       # abstracted out
       tasks = Task.render_all
@@ -52,6 +52,7 @@ class Application
   end #call
 
 end #application 
+
 
 
 # GET /tasks - show all tasks
