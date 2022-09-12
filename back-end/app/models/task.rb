@@ -7,6 +7,7 @@ class Task < ActiveRecord::Base
         self.all.find(task_id)
     end
 
+    
     def self.render_all 
         self.all.map do |task|
             {
