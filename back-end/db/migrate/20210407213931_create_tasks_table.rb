@@ -5,5 +5,6 @@ class CreateTasksTable < ActiveRecord::Migration[5.2]
       t.string :text
       t.integer :category_id
     end
+ 
   end
 end
