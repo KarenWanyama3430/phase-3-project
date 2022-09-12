@@ -11,7 +11,7 @@ class Application
       # abstracted out
       task = Task.find_by_path(req.path)
 
-      
+
       if task && task.destroy 
         return [200, { 'Content-Type' => 'application/json' }, [ {:message => "task successfully deleted", task: task}.to_json ]]
       else
@@ -36,6 +36,7 @@ class Application
       # end
 
 
+      
     elsif req.path.match(/tasks/) && req.get?
       # abstracted out
       tasks = Task.render_all
